@@ -1,3 +1,9 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 
-# Create your tests here.
+
+class SampleTest(TestCase):
+
+    def test_home_page_hello_world(self):
+        client = Client()
+        response = client.get("/")
+        assert "Hello World" in response.content.decode("utf-8")
