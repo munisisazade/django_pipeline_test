@@ -22,7 +22,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
-        python -r requirements.txt
+        pip install -r requirements.txt
     - name: Check lint issues
       run: |
         black . --check
