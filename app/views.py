@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    context={"name": "test"}
+    context = {"name": "test"}
     return render(request, "index.html")
